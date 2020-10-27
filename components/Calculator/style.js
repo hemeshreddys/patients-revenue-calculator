@@ -18,7 +18,7 @@ export const RectangleBox = Styled.div `
     line-height: 22px;
 
     @media (min-width: 1024px) {
-        width: 218px;
+        width: 160px;
         margin: 0 5px;
         height: 179px;
     }
