@@ -29,10 +29,10 @@ const Calculator = () => {
     return(
         <style.Container>
             <style.RectangleBox  boxBGColor={'#122431'}>
-                <div>Fee per patient:</div>
+                <div style={{marginBottom:'20px'}}>Fee per patient:</div>
                 <div><span style={{fontSize:'2em'}}>$</span><input type="number" id="feePerPatient" value={feePerPatient} name="quantity" min="1" max="1000" onChange={(e) => setFeePerPatient(e.target.value)}/></div>
             </style.RectangleBox>
-            <style.RectangleBox  boxBGColor={'#ffffff'} boxTextColor={'#000000'} boxInputTextColor={'#003A6B'}>
+            <style.RectangleBox boxBGColor={'#ffffff'} boxTextColor={'#000000'} boxInputTextColor={'#003A6B'}>
                 <div>Patients per week:</div>
                 <div className="dynamic-field"><input type="number" id="patientPerWeek" value={count} name="quantity" min="1" max="100" onChange={onChangePatientPerWeek}/>
                     <div className="inner-btns">
