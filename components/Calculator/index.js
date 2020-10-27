@@ -7,23 +7,20 @@ const Calculator = () => {
     const [patientPerYear,setPatientPerYear] = useState(1);
     const [patientRevenuePerYear,setPatientRevenuePerYear] = useState(1);
     const [feePerPatient,setFeePerPatient] = useState(75);
+    const [count, setCount] = useState(0);
     let totalRevenue = 1;
     //"Fee per patient"​ is a dynamic input that the user can modify, the default should be $75 per patient.
     //"Patients per week"​ is a dynamic input that the user can modify.
     //"Patients per year"​ is calculated based on the number of ​"patients per week"​ multiplied by the number of weeks in a year (52)
     //"Patient revenue per year"​ is calculated by multiplying ​"Fee per patient"​ with the number from ​“Patients per year"
-    const [count, setCount] = useState(0);
     useEffect(() => {
         totalRevenue = feePerPatient * patientPerYear;
-        console.log(totalRevenue);
         setPatientRevenuePerYear(totalRevenue);
         setPatientPerWeek(count);
         setPatientPerYear(count * 52)
     },[patientPerYear,feePerPatient,count]);
 
     const onChangePatientPerWeek = event => {
-
-        console.log(event.target.innerText)
         let patients = event.target.value;
         setPatientPerWeek(patients);
         setPatientPerYear(patients * 52)

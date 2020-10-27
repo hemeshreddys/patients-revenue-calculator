@@ -12,6 +12,7 @@ const Home = () => {
                 <h1>{Data.page1.title}</h1>
                 <h3>{Data.page1.subTitle}</h3>
                 <p>{Data.page1.desc}</p>
+                {/* Custom button with Nextjs Link */}
                 <Button><Link href="/page2"><span>View Calculator</span></Link>  </Button>
             </Background>
         </div>
