@@ -3,7 +3,7 @@ import * as style from './style';
 
 
 const Calculator = () => {
-    const [patientPerWeek,setPatientPerWeek] = useState(1);
+    const [patientPerWeek,setPatientPerWeek] = useState(0);
     const [patientPerYear,setPatientPerYear] = useState(1);
     const [patientRevenuePerYear,setPatientRevenuePerYear] = useState(1);
     const [feePerPatient,setFeePerPatient] = useState(75);
@@ -16,9 +16,9 @@ const Calculator = () => {
     useEffect(() => {
         totalRevenue = feePerPatient * patientPerYear;
         setPatientRevenuePerYear(totalRevenue);
-        setPatientPerWeek(count);
-        setPatientPerYear(count * 52)
-    },[patientPerYear,feePerPatient,count]);
+        setPatientPerWeek(patientPerWeek);
+        setPatientPerYear(patientPerWeek * 52)
+    },[patientPerYear,feePerPatient,patientPerWeek]);
 
     const onChangePatientPerWeek = event => {
         let patients = event.target.value;
@@ -34,10 +34,10 @@ const Calculator = () => {
             </style.RectangleBox>
             <style.RectangleBox boxBGColor={'#ffffff'} boxTextColor={'#000000'} boxInputTextColor={'#003A6B'}>
                 <div>Patients per week:</div>
-                <div className="dynamic-field"><input type="number" id="patientPerWeek" value={count} name="quantity" min="1" max="100" onChange={onChangePatientPerWeek}/>
+                <div className="dynamic-field"><input type="number" value={patientPerWeek} min="1" max="100" onChange={onChangePatientPerWeek}/>
                     <div className="inner-btns">
-                        <button className="plus" onClick={() => setCount(count + 1)}></button>
-                        <button className="minus" onClick={() => setCount(count - 1)}></button>
+                        <button className="plus" onClick={() => setPatientPerWeek(parseInt(patientPerWeek) + 1)}></button>
+                        <button className="minus" onClick={() => setPatientPerWeek(patientPerWeek - 1)}></button>
                     </div>
                 </div>
             </style.RectangleBox>
