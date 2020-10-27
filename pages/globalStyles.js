@@ -10,6 +10,14 @@ body {
     margin: 0;
     background: #F4F4F4;
     font-family: 'Tahoma';
+    @font-face {
+        font-family: 'Tahoma';
+        src: url('../static/fonts/Tahoma-Bold.woff2') format('woff2'),
+            url('../static/fonts/Tahoma-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
 }
 
 * {
