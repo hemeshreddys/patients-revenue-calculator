@@ -1,4 +1,5 @@
 // Define routes to export to static HTML
 exports.exportPathMap = () => ({
-  '/': { page: '/' }
+  '/': { page: '/' },
+  '/page2': { page: '/page2' }
 })
