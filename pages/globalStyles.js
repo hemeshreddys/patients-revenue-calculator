@@ -1,7 +1,7 @@
-import {
+import styled,{
     createGlobalStyle,
     ThemeProvider
-} from 'styled-components'
+}  from 'styled-components'
 
 
 const GlobalStyle = createGlobalStyle `
@@ -72,6 +72,12 @@ h1 {
     }
 }
 h2 {
+    font-size: 2em;
+    @media (min-width: 600px) {
+        font-size: 2em;
+    }
+}
+h3 {
     font-size: 1em;
     @media (min-width: 600px) {
         font-size: 2em;
@@ -98,3 +104,17 @@ a {
 `
 
 export default GlobalStyle
+
+
+export const Background = styled.div`
+  width: 100vw;
+   
+    background:  ${props => ( props.backgroundColor ? props.backgroundColor : "#0000007a")};;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media (min-width: 600px) {
+        padding: 150px; 
+    }
+`

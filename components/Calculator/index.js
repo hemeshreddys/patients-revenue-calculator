@@ -1,6 +1,5 @@
 import React, {useEffect,useState,useRef} from 'react';
 import * as style from './style';
-import Link from 'next/link';
 
 const Calculator = () => {
     const [patientPerWeek,setPatientPerWeek] = useState(1);
@@ -27,7 +26,6 @@ const Calculator = () => {
 
     return(
         <style.Container>
-            <Link href="/"><a className="black">Back to Home</a></Link>
             <style.RectangleBox  boxBGColor={'#122431'}>
                 <div>Fee per patient:</div>
                 <div><span style={{fontSize:'2em'}}>$</span><input type="number" id="feePerPatient" value={feePerPatient} name="quantity" min="1" max="1000" onChange={(e) => setFeePerPatient(e.target.value)}/></div>
