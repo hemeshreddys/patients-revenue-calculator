@@ -28,7 +28,7 @@ const Calculator = () => {
             </style.RectangleBox>
             <style.RectangleBox  boxBGColor={'#ffffff'} boxTextColor={'#000000'}>
                 <div>Patients per week:</div>
-                <span className="number-wrapper"><input type="number" id="patientPerWeek" value={patientPerWeek} name="quantity" min="1" max="100" onChange={onChangeHandler}/></span>
+                <span><input type="number" id="patientPerWeek" value={patientPerWeek} name="quantity" min="1" max="100" onChange={onChangeHandler}/></span>
             </style.RectangleBox>
             <style.RectangleBox  boxLinearColor={'linear-gradient(90deg, #75B9A6 0%, #3C8E78 100%)'}>
                 <div>Patients per year: </div>

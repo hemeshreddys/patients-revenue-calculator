@@ -66,7 +66,22 @@ body {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 2em;
+    @media (min-width: 600px) {
+        font-size: 4em;
+    }
+}
+h2 {
+    font-size: 1em;
+    @media (min-width: 600px) {
+        font-size: 2em;
+    }
+}
+p {
+    font-size: 0.8em;
+    @media (min-width: 600px) {
+        font-size: 1em;
+    }
 }
 
 a {
@@ -79,6 +94,7 @@ a {
         color: #000000;
     }
 }
+
 `
 
 export default GlobalStyle
