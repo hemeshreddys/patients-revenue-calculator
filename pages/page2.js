@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Page2 = () => {
     return(
         <>
-            <Link href="/"><a><span className="home"></span>Back to Home</a></Link>
+            <Link href="/"><a className="black"><span className="home"></span>Back to Home</a></Link>
             <Calculator/>
         </>
     )

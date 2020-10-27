@@ -63,6 +63,13 @@ h1 {
 
 a {
     max-width: 300px;
+    text-decoration: none;
+    &.white{
+        color: #ffffff;
+    }
+    &.black{
+        color: #000000;
+    }
 }
 `
 
