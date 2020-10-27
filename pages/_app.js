@@ -1,4 +1,4 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 import GlobalStyle,{Background} from './globalStyles'
 
 const theme = {

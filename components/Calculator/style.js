@@ -16,6 +16,7 @@ export const RectangleBox = Styled.div `
     font-weight: bold;
     letter-spacing: 0;
     line-height: 22px;
+
     @media (min-width: 1024px) {
         width: 218px;
         margin: 0 5px;
@@ -78,8 +79,12 @@ export const Container = Styled.div `
     width:100vw;
     margin: 10% auto;
     flex-direction:column;
+
     @media (min-width: 1024px) {
         flex-direction:row;
         width:70vw;
     }
 `
+
+
+

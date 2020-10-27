@@ -1,6 +1,7 @@
 import React, {useEffect,useState,useRef} from 'react';
 import * as style from './style';
 
+
 const Calculator = () => {
     const [patientPerWeek,setPatientPerWeek] = useState(1);
     const [patientPerYear,setPatientPerYear] = useState(1);
