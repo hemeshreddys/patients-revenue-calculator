@@ -21,21 +21,28 @@ export const RectangleBox = Styled.div `
         margin: 0 5px;
         height: 179px;
     }
+    .dynamic-field{
+      input[type=number]::-webkit-inner-spin-button {
+        color:#003A6B;
+        opacity: 1;
+      }
+    }
     input:focus, textarea:focus, select:focus{
         outline: none;
+        border:none;
         
     }
-    input[type=number]::-webkit-inner-spin-button {
-        opacity: 1;
-        border:1px solid red;
-        width:100px;
-    }
+
     input {
-        font-size: 30px;
+        border-color: transparent;
+        font-size: 2em;
+        text-align: left;
+        margin-top:20px;
         background:transparent;
         font-family: 'Tahoma';
         font-weight: 700;
-        color:${props => ( props.boxTextColor ? props.boxTextColor : '#ffffff')} ;
+        width: 80px;
+        color:${props => ( props.boxInputTextColor ? props.boxInputTextColor : '#ffffff')} ;
     }
     input:focus {
     outline:none;
@@ -49,7 +56,7 @@ export const Container = Styled.div `
     justify-content:space-between;
     align-items:center; 
     width:100vw;
-    margin: 0 auto;
+    margin: 10% auto;
     flex-direction:column;
     @media (min-width: 1024px) {
         flex-direction:row;
