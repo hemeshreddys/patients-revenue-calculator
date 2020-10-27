@@ -11,7 +11,7 @@ const Home = () => {
                 <h1>{Data.page1.title}</h1>
                 <h3>{Data.page1.subTitle}</h3>
                 <p>{Data.page1.desc}</p>
-                <Link href="/page2"><a className="white"><span className="calc"></span>View the Calculator</a></Link>
+                <Link href="/page2"><a className="white"><span className="calc"></span>View the Calculator</a></Link>              
             </Background>
         </div>
     )

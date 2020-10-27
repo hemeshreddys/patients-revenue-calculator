@@ -11,14 +11,18 @@ const Calculator = () => {
     //"Patients per week"​ is a dynamic input that the user can modify.
     //"Patients per year"​ is calculated based on the number of ​"patients per week"​ multiplied by the number of weeks in a year (52)
     //"Patient revenue per year"​ is calculated by multiplying ​"Fee per patient"​ with the number from ​“Patients per year"
-
+    const [count, setCount] = useState(0);
     useEffect(() => {
         totalRevenue = feePerPatient * patientPerYear;
         console.log(totalRevenue);
         setPatientRevenuePerYear(totalRevenue);
-    },[patientPerYear,feePerPatient]);
+        setPatientPerWeek(count);
+        setPatientPerYear(count * 52)
+    },[patientPerYear,feePerPatient,count]);
 
     const onChangePatientPerWeek = event => {
+
+        console.log(event.target.innerText)
         let patients = event.target.value;
         setPatientPerWeek(patients);
         setPatientPerYear(patients * 52)
@@ -32,7 +36,12 @@ const Calculator = () => {
             </style.RectangleBox>
             <style.RectangleBox  boxBGColor={'#ffffff'} boxTextColor={'#000000'} boxInputTextColor={'#003A6B'}>
                 <div>Patients per week:</div>
-                <div className="dynamic-field"><input type="number" id="patientPerWeek" value={patientPerWeek} name="quantity" min="1" max="100" onChange={onChangePatientPerWeek}/></div>
+                <div className="dynamic-field"><input type="number" id="patientPerWeek" value={count} name="quantity" min="1" max="100" onChange={onChangePatientPerWeek}/>
+                    <div className="inner-btns">
+                        <button className="plus" onClick={() => setCount(count + 1)}></button>
+                        <button className="minus" onClick={() => setCount(count - 1)}></button>
+                    </div>
+                </div>
             </style.RectangleBox>
             <style.RectangleBox  boxLinearColor={'linear-gradient(90deg, #75B9A6 0%, #3C8E78 100%)'}>
                 <div>Patients per year: </div>
